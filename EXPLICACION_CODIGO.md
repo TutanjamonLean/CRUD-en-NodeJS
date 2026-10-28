@@ -209,22 +209,3 @@ Si el proyecto creciera, las mejoras naturales serían:
 
 ---
 
-## 💡 Puntos Clave para Defender en la Evaluación
-
-1. **"¿Por qué usaste un array y no una base de datos?"**
-   → Lo pide explícitamente el enunciado: *"Los datos se almacenarán en un array de JavaScript"*
-
-2. **"¿Cómo garantizas que los IDs no se repitan?"**
-   → Variable `nextId` que incrementa en cada creación (`nextId++`)
-
-3. **"¿Qué pasa si mando precio como string '1800'?"**
-   → Se rechaza con 400: `typeof body.precio !== 'number'` detecta strings
-
-4. **"¿Por qué 201 en POST y 200 en PUT?"**
-   → Estándar REST: 201 = Created (nuevo recurso), 200 = OK (operación exitosa con respuesta)
-
-5. **"¿Cómo manejas errores de validación?"**
-   → Función `validarProducto()` retorna array de errores; si tiene elementos, responde 400 con todos los errores juntos
-
-6. **"¿Los cambios persisten?"**
-   → Solo en memoria mientras el servidor corre (punto 7: *"los cambios se conservarán únicamente mientras el servidor esté en ejecución"*)
